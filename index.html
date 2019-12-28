@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- Author Hy忠 -->
+<head>
+    <title>贪吃蛇</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            /* 填充单个元素满屏不出现滚动条 */
+            height: 100%;
+            background-color: #333333;
+        }
+
+        .tips {
+            margin: 0;
+            padding: 18px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        #gameCanvas {
+            display: block;
+            border: 2px solid #999999;
+            margin: 0 auto;
+        }
+
+        .restart {
+            border-radius: 5px;
+            border: none;
+            float: right;
+        }
+
+        .d-none {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 class="tips">
+        <label>速度(挡位高则慢)：</label>
+        <select id="speed" onchange="changeSpeed()">
+            <option value="1">1</option>
+            <option value="1.5" selected>1.5</option>
+            <option value="2">2</option>
+            <option value="2.5">2.5</option>
+            <option value="3">3</option>
+            <option value="3.5">3.5</option>
+        </select>
+        <span>得分：</span>
+        <strong id='score'>0</strong>
+        <button id="restart" class="restart d-none" onclick="restart()">重新开始</button>
+    </h3>
+    <canvas id="gameCanvas">你的浏览器炸了</canvas>
+    <script type="text/javascript" src="game.js"></script>
+</body>
+
+</html>
